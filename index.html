@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>error checker</title>
+    <style type="text/css" media="all">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      
+      .panel {
+        min-width: 90%;
+        min-height: 100vh;
+        background: #110f2f;
+      }
+      
+      header{
+        background: #a60303;
+        line-height: 2.4;
+        color: #fff;
+        padding: 15px 15px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      
+      header h2 {
+        text-transform: uppercase;
+        font-family: Tahoma;
+        font-weight: 400;
+      }
+      
+      header h5 {
+        text-transform: capitalize;
+        font-family: Monospace;
+      }
+      
+       .source {
+        padding: 17px 20px;
+        font-family: Tahoma;
+        text-transform: capitalize;
+        color: #2781f4;
+      }
+      
+      .error_panel {
+        max-width: 90%;
+        min-height: 370px;
+        background: #6c6c6c;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+      }
+      
+      .inner_panel {
+        width: 95%;
+        height: 310px;
+        background: #ff925a;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        overflow-y: scroll;
+        text-wrap: wrap;
+      }
+      
+      .error_panel h4 {
+        font-family: Monospace;
+        text-transform: capitalize;
+        padding-top: 15px;
+        padding-left: 10px;
+      }
+      
+     ol {
+       display: inline-block;
+       padding-right: 20px;
+       padding-left: 25px;
+       padding-top: 15px;
+     } 
+     
+     ol li {
+       font-family: Monospace;
+       word-spacing: 0.5px;
+       font-weight: 700;
+       margin-top: 10px;
+     }
+   
+     .panel_2{
+        max-width: 90%;
+        min-height: 130px;
+        background: #6c6c6c;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        border: 1px solid #ddd;
+        overflow-y: scroll;
+     }
+     
+     #highlight {
+       background-color: #ff0303;
+       color: #f2f2f2;
+       line-height: 1.5;
+     }
+    </style>
+  </head>
+  <body>
+    <section class="panel">
+    <header>
+      <h2>parse error</h2>
+      <h5>syntax error, unexpected T_STRING</h5>
+    </header>
+      <h2 class="source">source file <span>»</span></h2>
+        <section class="error_panel">
+          <h4>file: <!-- file path goes here --></h4>
+            <div class="inner_panel">
+              <ol>
+                <!-- text goes here -->
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</li>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</li>
+                <li id="highlight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</li>
+              </ol>
+            </div>
+        </section>
+          <h2 class="source">call stack <span>»</span></h2>
+        <section class="panel_2">
+          <ol>
+            <li>text blah blah blah</li>
+            <li>text blah blah blah</li>
+          </ol>
+        </section>
+    </section>
+  </body>
+</html>
